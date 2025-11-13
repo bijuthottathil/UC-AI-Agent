@@ -1,0 +1,27 @@
+[project]
+name = "mlagent"
+version = "0.1.0"
+description = "Unity Catalog Permissions Management Agent with CrewAI and LangGraph"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "crewai>=0.86.0",
+    "crewai-tools>=0.12.0",
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "streamlit>=1.39.0",
+    "databricks-sdk>=0.33.0",
+    "databricks-cli>=0.18.0",
+    "pydantic>=2.9.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.2.0",
+    "utils>=1.0.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
